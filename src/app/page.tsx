@@ -1,7 +1,6 @@
 'use client'
 import styled from "styled-components";
-import { HomePageProps } from "@/Utils/props";
-import  UserInput  from "@/components/UserInput"
+import  UserInput  from "@/components/UserInput";
 import { screens } from "@/Utils/props";
 
 const MainContainer = styled.main<{ $bgcolor: string}> `
@@ -34,11 +33,14 @@ text-underline-offset: 10px;
   
 `;
 
-export default function Home({background, boxBackground, fontShadow}: HomePageProps){
+export default function Home(){
+  const background = "radial-gradient(circle,rgba(63, 94, 251, 1) 0%, rgba(252, 70, 107, 1) 100%)"
+  const boxBackground = "white";
+  const fontShadow = "4px 4px 2px rgba(0,0,0,0.6)"
   return (
-    <MainContainer $bgcolor={background= "radial-gradient(circle,rgba(63, 94, 251, 1) 0%, rgba(252, 70, 107, 1) 100%)"}>
-      <StyledBox $boxBgcolor={boxBackground = 'white'} $featured="-9px 9px 5px 0px rgba(0,0,0,0.75)">
-         <StyledHeading $fontShadow={fontShadow} $featured='4px 4px 2px rgba(0,0,0,0.6);'>Best practice!</StyledHeading> 
+    <MainContainer $bgcolor={background}>
+      <StyledBox $boxBgcolor={boxBackground} $featured="-9px 9px 5px 0px rgba(0,0,0,0.75)">
+         <StyledHeading $fontShadow={fontShadow} $featured={fontShadow}>Best practice!</StyledHeading> 
          <UserInput/>
       </StyledBox>
     </MainContainer>
