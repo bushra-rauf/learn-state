@@ -11,6 +11,12 @@ export type FooterProps = {
     title: string;
 }
 
+// export interface HomePageProps  {
+//     background: string;
+//     boxBackground: string;
+//     fontShadow: string;
+// }
+
 export interface FoamProps {
   userInput: string;
   count: number;
